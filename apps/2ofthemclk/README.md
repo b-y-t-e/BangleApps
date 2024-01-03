@@ -1,4 +1,4 @@
-# two of them clock
+# Edi Clock
 
 You can now wear teh memez on your wrist.
 
@@ -8,4 +8,4 @@ Also serves as an example of displaying seconds only when unlocked or charging a
 Widgets not supported
 
 ## Creator
-- [Kilrah](https://github.com/kilrah)
+- [b-y-t-e](https://github.com/b-y-t-e)
