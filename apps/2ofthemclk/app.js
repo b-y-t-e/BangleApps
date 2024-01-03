@@ -4,7 +4,7 @@ var battery = E.getBattery();
 // Positions on screen
 const timeX = 56, timeY = 37;
 const dateX = 175, dateY = 180;
-const battX = 172, battY = 175;
+const battX = 172, battY = 37;
 const stepsX = 5;
 const stepsY = 100;
 
@@ -49,12 +49,14 @@ function draw() {
   g.drawString(time, timeX, timeY, false);
 
   // Draw battery %
+  g.setColor(1, 0, 0);
   g.setFont("6x15",1);
   var battStr = "";
   if(Bangle.isCharging()) {
     battStr = "+";
   }
   g.drawString(battStr + battery + "%", battX, battY, false);
+  g.setColor(0, 0, 0);
 
   // Draw date
   g.setFontAlign(1,1); // align left bottom
