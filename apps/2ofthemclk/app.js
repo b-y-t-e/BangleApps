@@ -4,9 +4,9 @@ var battery = E.getBattery();
 // Positions on screen
 const timeX = 56, timeY = 37;
 const dateX = 175, dateY = 180;
-const battX = 172, battY = 37;
-const stepsX = 5;
-const stepsY = 100;
+const battX = 172, battY = 19;
+const stepsX = 140;
+const stepsY = 153;
 
 // Draw on every second if unlocked or charging, minute otherwise, start at with seconds on load
 var drawTimeout;
@@ -49,7 +49,7 @@ function draw() {
   g.drawString(time, timeX, timeY, false);
 
   // Draw battery %
-  g.setColor(1, 0, 0);
+  g.setColor(0, 0, 0);
   g.setFont("6x15",1);
   var battStr = "";
   if(Bangle.isCharging()) {
@@ -103,7 +103,8 @@ function draw() {
 
 
   // Rysowanie liczby kroków
-  //g.drawString("Lapek:" + steps, stepsX, stepsY, true);
+  g.setColor(0, 0, 1); // ustawienie na zielony
+  g.drawString("" + steps, stepsX, stepsY, false);
 
 
   // Schedule next draw
